@@ -1,6 +1,12 @@
 # Note
+
 ## node modules are not committed
+
 Please run `yarn install` after cloning the repo
+
+Created a seperate folder called ignore-me-for-dev-only to test for shoppingCart
+
+This folder is also ignored on git commits's but can be provided upon request
 
 # Homework Assignment
 
