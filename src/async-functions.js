@@ -13,12 +13,23 @@ function giveItBackLater(value, callback){
     // setTimeout(callback, 2000, value)
 };
 function promiseToGiveItBackLater(value){
-    return new Promise((resolve, reject)=>{
+    return new Promise((resolve)=>{
         giveItBackLater(value, ()=>{
             return resolve(value)
         })
     })
 }
-function addSomePromises(){}
+function addSomePromises(prevPromise){
+    return new Promise((resolve, reject)=>{
+        prevPromise
+        .then((prevPromiseResolution)=>{
+            return resolve(prevPromiseResolution+prevPromiseResolution)
+        })
+        .catch((prevPromiseRejection)=>{
+            return resolve(prevPromiseRejection+prevPromiseRejection+prevPromiseRejection)
+
+        })
+    })
+}
 
 // giveItBackLater("hello", x=>x+x)
