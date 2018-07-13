@@ -1,3 +1,7 @@
+# Note
+## node modules are not committed
+Please run `yarn install` after cloning the repo
+
 # Homework Assignment
 
 This assignment covers the first week of the Intermediate Bootcamp. This repository contains 3 test files, each covering a single task. The order of the tasks does not matter. You can complete them in any order. Try to complete as many of them as you can.

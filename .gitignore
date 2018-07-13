@@ -1,2 +1,3 @@
 node_modules/
+ignore-me-for-dev-only/
 .DS_Store
