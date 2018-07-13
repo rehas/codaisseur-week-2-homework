@@ -1,4 +1,4 @@
-let pathFind = function(path, object){
+function pathFind(path, object){
     // console.log(path, object);
     
     // const res = path.reduce((agg, cv, index)=>{
