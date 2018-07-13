@@ -1,4 +1,4 @@
-const pathFind = function(path, object){
+let pathFind = function(path, object){
     // console.log(path, object);
     
     // const res = path.reduce((agg, cv, index)=>{
@@ -20,21 +20,28 @@ const pathFind = function(path, object){
 
     // console.log(`this is path ${path} -- this is popped ${path[0]} -- this is new path ${path.slice(1)}`)
     // console.log(`This is path after slice ${path}`)
-    if (path.length === 1){
-        // console.log(object[path[0]])
+
+    // WORKING CODE EXCEPT RECURSION DON'T DELETE BELOW COMMENT BLOCK
+
+/*     if (path.length < 2){
+        console.log(object[path[0]])
         return object[path[0]]
     }
 
-    //console.log(res)
-    return pathFind(path.slice(1), object[path[0]])
+    return pathFind(path.slice(1), object[path[0]]) 
+*/
+
+    return (path.length < 2)? object[path[0]] : pathFind(path.slice(1), object[path[0]])
+
 }
 
 module.exports = {pathFind}
 
-pathFind(["book", "author", "name"], {
+console.log (pathFind(["book", "author", "name"], {
     book: {
       author: {
         name: "Yuval"
       }
     }
   })
+)
